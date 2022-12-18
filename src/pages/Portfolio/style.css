@@ -1,1 +1,19 @@
-.portfolio{background:blue;}
+.portfolio h2{display:none;}
+.portfolio ul{display:flex;flex-wrap: wrap;justify-content: space-around;}
+.portfolio li{width:30%;height:280px;margin-bottom:15px;overflow:hidden;border-radius:5px;transition:transform 200ms ease,filter 200ms ease;filter:grayscale(0.4);border:3px solid #000;}
+.portfolio li:hover{transform:scale(1.04);filter:grayscale(0)}
+.portfolio li img{width:100%;height:100%;object-fit: cover;object-position: center;}
+.portfolio li .detail{
+    position:absolute;bottom:0;width:100%;text-align:left;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(0 0% 0% / 0.6) 30%,
+        hsl(0 0% 0% / 1)
+    );
+    --cardpadding:1.2rem;
+    padding:1.8rem var(--cardpadding) 1.2rem var(--cardpadding);
+}
+.portfolio li h3{
+    font-size:1.2em;color:var(--clr);margin-bottom:10px;letter-spacing: 0.1rem;
+    position:relative;text-shadow: 2px 2px 5px rgba(0,0,0,0.4); 
+}

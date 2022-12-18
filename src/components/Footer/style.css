@@ -1,0 +1,6 @@
+.footer{padding:30px;}
+.footer ul{display:flex;justify-content: center;}
+.footer li a{color:#999;padding:0 10px;}
+.footer li a:hover{
+    color:var(--clr)
+}
