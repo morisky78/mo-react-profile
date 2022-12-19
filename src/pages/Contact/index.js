@@ -54,39 +54,41 @@ export default function Contact({currentPage, setCurrentPage}) {
     }
   return (
     <div className="contact">
-        <h2>Contact Me</h2>
-        <form className="form">
-            <div>
-                <label for="sender">Name</label>
-                <input type="text" 
-                    value={sender}
-                    name="sender"
-                    id="sender"
-                    onChange={handleInputChange} />
-            </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email"
-                    value={email}
-                    name="email"
-                    id="email"
-                    onChange={handleInputChange} />
-            </div>
-            <div>
-                <label for="message">Message</label>
-                <textarea name="message"
-                    id="message"
-                    value={message}
-                    onChange={handleInputChange} />
-            </div>
-            <input type="submit" onClick={handleFormSubmit} />
-            {errorMsg && (
-                <p className="errmsg">{errorMsg}</p>
-            )}
-            {submitMsg && (
-                <p className="submitmsg">{submitMsg}</p>
-            )}
-        </form>
+        <div className="contentbox">
+            <h2>Contact Me</h2>
+            <form className="form">
+                <div className='inputLine'>
+                    <label for="sender">Name</label>
+                    <input type="text" 
+                        value={sender}
+                        name="sender"
+                        id="sender"
+                        onChange={handleInputChange} />
+                </div>
+                <div className='inputLine'>
+                    <label for="email">Email</label>
+                    <input type="email"
+                        value={email}
+                        name="email"
+                        id="email"
+                        onChange={handleInputChange} />
+                </div>
+                <div className='inputLine'>
+                    <label for="message">Message</label>
+                    <textarea name="message"
+                        id="message"
+                        value={message}
+                        onChange={handleInputChange} />
+                </div>
+                <input type="submit" onClick={handleFormSubmit} className='sbmbtn'/>
+                {errorMsg && (
+                    <p className="errmsg">{errorMsg}</p>
+                )}
+                {submitMsg && (
+                    <p className="submitmsg">{submitMsg}</p>
+                )}
+            </form>
+        </div>
     </div>
   )
 }

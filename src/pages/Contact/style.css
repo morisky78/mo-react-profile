@@ -1,6 +1,12 @@
-.contact{background-color: aquamarine;}
+.contact h2{margin-bottom:30px;}
 
-#hideMeAfter5Seconds {
+.contact label{color:var(--clr-font);width:100px;padding-top:8px;}
+.contact input{border:2px solid #000;padding:7px 10px;width:50%;background-color: var(--clr-light-gray);}
+.contact .inputLine{display:flex;margin-bottom:15px;}
+.contact textarea{width:50%;border:1px solid #000;height:20vh;padding:7px 10px;border:2px solid #000;background-color: var(--clr-light-gray);}
+.contact input:focus, .contact textarea:focus{background-color: #fff;}
+.contact .sbmbtn{background:var(--clr);width:auto;border:none;padding:8px 30px;margin-left:102px;box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);}
+/* #hideMeAfter5Seconds {
     animation: hideAnimation 0s ease-in 5s;
     animation-fill-mode: forwards;
   }
@@ -11,4 +17,4 @@
       width: 0;
       height: 0;
     }
-  }
+  } */
