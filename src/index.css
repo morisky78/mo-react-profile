@@ -57,3 +57,19 @@ body{background: linear-gradient(0.25turn, #252525, #1d1d1d);font-family: 'Poppi
 .contentbox{background-color:var(--clr-gray);padding:30px;box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);text-align: left;border-left:3px solid var(--clr)}
 .contentbox h2{color:var(--clr);font-size:1.5em;font-weight:bold;margin-bottom:10px;}
 .contentbox p{color:var(--clr-font);line-height: 160%;}
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+  .maincontainer{width:95%;}
+}
+  
+/* Large smartphones */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Small smartphones  */
+@media screen and (max-width: 576px) {
+
+}
+  

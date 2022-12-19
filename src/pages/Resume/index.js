@@ -15,7 +15,7 @@ export default function Resume({currentPage, setCurrentPage}) {
         
       <div className='contentbox hd'>
         <h2>Resume</h2>
-        <p>Download my <a href="##">resume</a></p>
+        <p>Download my <a href="resume_MoRisk.pdf" download>resume</a></p>
       </div>
         
       
@@ -39,6 +39,7 @@ export default function Resume({currentPage, setCurrentPage}) {
           <li>Express</li>
           <li>JQuery</li>
           <li>MySQL, Sequelize</li>
+          <li>PHP</li>
         </ul>
       </div>
 
