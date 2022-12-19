@@ -1,6 +1,8 @@
-.resume{display:flex;flex-wrap: wrap;}
-.resume .contentbox{width:48%;border-left:0;}
-.resume .hd{display:flex;padding-top:25px;padding-bottom:18px;margin-bottom:25px;width:100%;}
+.resume{display:flex;flex-wrap: wrap;justify-content:flex-end;}
+.resume .contentbox{width:46%;border-left:0;position:relative;margin-left:4%}
+.resume .hd{display:flex;padding-top:25px;padding-bottom:18px;margin-bottom:25px;width:100%;border-left:3px solid var(--clr);margin-left:0;}
 .resume .hd h2{margin-right:15px;color:var(--clr);font-size:1.5em;font-weight:bold;}
 .resume .hd p a{color:var(--clr-lightgray)}
 .resume .hd p a:hover{color:var(--clr)}
+.resume h3{position:relative;left:-40px;background-color:var(--clr);font-size:1.1em;padding:10px 40px 10px 20px;margin-bottom:25px;display:inline-block;font-weight:bold;box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);}
+.resume li{color:var( --clr-font);margin-bottom:15px;}

@@ -22,8 +22,7 @@ export default function Resume({currentPage, setCurrentPage}) {
       <div className='contentbox'>
         <h3>Front-end Proficiencies</h3>
         <ul>
-          <li>HTML</li>
-          <li>CSS</li>
+          <li>HTML / CSS</li>
           <li>JavaScript</li>
           <li>JQuery</li>
           <li>Responsive design</li>
