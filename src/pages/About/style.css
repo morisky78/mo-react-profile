@@ -1,3 +1,17 @@
 .about {display:flex;text-align: left;align-items: flex-start;}
 .about .profilepic{width:35%;filter: brightness(0.8);}
 .about .contentbox{position:relative;width:68%;top:30px;left:-30px;}
+
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+    .about .contentbox{top:0;left:0;width:65%;}
+}
+  
+
+/* Small smartphones  */
+@media screen and (max-width: 576px) {
+    .about {flex-direction: column;}
+    .about .profilepic{width:100%;height:40vh;object-fit: cover;object-position: center;}
+    .about .contentbox{width:100%;}
+}
