@@ -5,16 +5,23 @@
 .contact .inputLine{display:flex;margin-bottom:15px;}
 .contact textarea{width:50%;border:1px solid #000;height:20vh;padding:7px 10px;border:2px solid #000;background-color: var(--clr-light-gray);}
 .contact input:focus, .contact textarea:focus{background-color: #fff;}
-.contact .sbmbtn{background:var(--clr);width:auto;border:none;padding:8px 30px;margin-left:102px;box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);}
-/* #hideMeAfter5Seconds {
-    animation: hideAnimation 0s ease-in 5s;
-    animation-fill-mode: forwards;
-  }
+.contact .sbmbtn{background:var(--clr);width:auto;border:none;padding:8px 30px;margin-left:102px;box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);cursor:pointer;}
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+
+}
   
-  @keyframes hideAnimation {
-    to {
-      visibility: hidden;
-      width: 0;
-      height: 0;
-    }
-  } */
+/* Large smartphones */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Small smartphones  */
+@media screen and (max-width: 576px) {
+  .contentbox{padding:25px;}
+  .contact label{width:80px;}
+  .contact input{width:70%;}
+  .contact textarea{flex-grow: 1;}
+  .contact .sbmbtn{margin-left:82px;}
+}
