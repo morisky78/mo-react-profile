@@ -1,1 +1,6 @@
-.resume{}
+.resume{display:flex;flex-wrap: wrap;}
+.resume .contentbox{width:48%;border-left:0;}
+.resume .hd{display:flex;padding-top:25px;padding-bottom:18px;margin-bottom:25px;width:100%;}
+.resume .hd h2{margin-right:15px;color:var(--clr);font-size:1.5em;font-weight:bold;}
+.resume .hd p a{color:var(--clr-lightgray)}
+.resume .hd p a:hover{color:var(--clr)}
