@@ -1,4 +1,4 @@
-# Mo Risk's React Profile
+# Mo Risk's React Portfolio
 
 ## Description
 This is my portfolio webpage, a single-page application built with React. This will provide my brief bio, some of most recent projects with deployed page and github links, contact form, and downloadable resume. This application doesn't include a back-end side, so the form will not send any information for now.
@@ -16,8 +16,10 @@ https://github.com/morisky78/mo-react-profile
 - Contact me form will not send or save the information since this app doesn't have a back-end side.
 - Contact me form will detect blank inputs and invalid email address and show error message accordingly.
 - The downloadable resume is a temporary sample.   
+
 <img src="public/images/ss01.jpg" height="235" alt="Screenshot of about me"> <img src="public/images/ss02.jpg" height="235" alt="Screenshot of projects">   
 <img src="public/images/ss03.jpg" height="235" alt="Screenshot of contact"> <img src="public/images/ss04.jpg" height="235" alt="Screenshot of resume"> 
+
 
 ### Screenshot on mobile
 - All mouseover effects are removed and show all hidden links on the project page.  
