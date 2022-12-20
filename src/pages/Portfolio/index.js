@@ -39,6 +39,13 @@ const projects = [
         githublink : 'https://github.com/FelishaYuMacias/Zoo-Animal-Game',
         imgUrl: './images/project-zoo.png',
         deployedUrl: 'https://felishayumacias.github.io/Zoo-Animal-Game/'
+    },
+    {
+        id:6,
+        title: 'Work Day Scheduler',
+        githublink : 'https://github.com/morisky78/workday-scheduler',
+        imgUrl: './images/workday-scheduler.jpg',
+        deployedUrl: 'https://morisky78.github.io/workday-scheduler/'
     }
 ]
 export default function Portfolio({currentPage, setCurrentPage}) {
