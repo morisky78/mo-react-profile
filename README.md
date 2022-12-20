@@ -22,10 +22,7 @@ https://github.com/morisky78/mo-react-profile
 
 ### Screenshot on mobile
 - All mouseover effects are removed and show all hidden links on the project page.  
-<img src="public/images/ms01.jpg" height="290" alt="Screenshot of about me">
-<img src="public/images/ms02.jpg" height="290" alt="Screenshot of projects"> 
-<img src="public/images/ms03.jpg" height="290" alt="Screenshot of contact"> 
-<img src="public/images/ms04.jpg" height="290" alt="Screenshot of resume"> 
+<img src="public/images/ms01.jpg" height="290" alt="Screenshot of about me"> <img src="public/images/ms02.jpg" height="290" alt="Screenshot of projects"> <img src="public/images/ms03.jpg" height="290" alt="Screenshot of contact"> <img src="public/images/ms04.jpg" height="290" alt="Screenshot of resume"> 
 
 ## Credits
 - React
