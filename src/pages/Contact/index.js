@@ -68,7 +68,7 @@ export default function Contact({currentPage, setCurrentPage}) {
             <h2>Contact Me</h2>
             <form className="form">
                 <div className='inputLine'>
-                    <label for="sender">Name</label>
+                    <label>Name</label>
                     <input type="text" 
                         value={sender}
                         name="sender"
@@ -76,7 +76,7 @@ export default function Contact({currentPage, setCurrentPage}) {
                         onChange={handleInputChange} />
                 </div>
                 <div className='inputLine'>
-                    <label for="email">Email</label>
+                    <label>Email</label>
                     <input type="email"
                         value={email}
                         name="email"
@@ -84,7 +84,7 @@ export default function Contact({currentPage, setCurrentPage}) {
                         onChange={handleInputChange} />
                 </div>
                 <div className='inputLine'>
-                    <label for="message">Message</label>
+                    <label>Message</label>
                     <textarea name="message"
                         id="message"
                         value={message}

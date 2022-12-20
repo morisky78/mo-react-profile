@@ -25,9 +25,9 @@
     padding:8px 10px 0 10px;
 }
 
-.portfolio li a{color:var(--clr);width:40px;height:100%;padding-top:3px;}
-.portfolio li a:hover{color:#fff;}
-.portfolio li i{vertical-align:text-bottom;}
+.portfolio li a{text-decoration: none;}
+.portfolio li .detail a{color:var(--clr);width:40px;height:100%;padding-top:3px;}
+.portfolio li .detail i{vertical-align:text-bottom;}
 
 @media(hover){
     .portfolio li .detail .box{
@@ -35,6 +35,8 @@
         right:-50px;
         transition: right 500ms ease;
     }
+    .portfolio li a:hover{color:#fff;}
+    .portfolio li a:hover a{color:#fff;}
     .portfolio li:hover{transform:scale(1.04);}
     .portfolio li:hover .detail .box{right:0;}
 }

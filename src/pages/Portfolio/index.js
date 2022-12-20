@@ -62,7 +62,7 @@ export default function Portfolio({currentPage, setCurrentPage}) {
     <div className="portfolio">
         <h2>Portfolio</h2>
         <ul>
-          {projects.map(item=>(<Project item={item}/>))} 
+          {projects.map(item=>(<Project key={item.id} item={item}/>))} 
         </ul>
     </div>
   )
