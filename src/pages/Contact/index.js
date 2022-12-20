@@ -18,6 +18,7 @@ export default function Contact({currentPage, setCurrentPage}) {
         } else return;
     },[]);
 
+
     const handleInputChange = (e) => {
         const {target} = e;
         const inputType = target.name;
@@ -25,10 +26,19 @@ export default function Contact({currentPage, setCurrentPage}) {
 
         if ( inputType === 'sender') {
             setSender(inputValue);
+            if ( target.value === '') {
+                setErrorMsg('Please enter a name.');
+            } else {setErrorMsg(''); }
         } else if ( inputType === 'email') {
             setEmail(inputValue);
+            if ( target.value === '') {
+                setErrorMsg('Please enter a valid email address.');
+            } else {setErrorMsg(''); }
         } else {
             setMessage(inputValue);
+            if ( target.value === '') {
+                setErrorMsg('Please enter a message.');
+            } else {setErrorMsg(''); }
         }
     }
     const handleFormSubmit = (e) => {
