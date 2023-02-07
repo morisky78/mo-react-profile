@@ -15,14 +15,14 @@ export default function Resume({currentPage, setCurrentPage}) {
         
       <div className='contentbox hd'>
         <h2>Resume</h2>
-        <p>Download my <a href="resume_MoRisk.pdf" download>resume</a></p>
+        <p>Download my <a href="MoRisk_Resume_0207.pdf" download>resume</a></p>
       </div>
         
       
       <div className='contentbox'>
         <h3>Front-end Proficiencies</h3>
         <ul>
-          <li>HTML / CSS</li>
+          <li>HTML5 / CSS3</li>
           <li>JavaScript</li>
           <li>JQuery</li>
           <li>Responsive design</li>
