@@ -14,9 +14,9 @@ const projects = [
     {
         id:2,
         title: 'StarKid',
-        githublink : 'https://github.com/morisky78/simple-tech-blog',
+        githublink : 'https://github.com/morisky78/star-kids-app',
         imgUrl: './images/project-starkids.jpg',
-        deployedUrl: 'https://starkids-app.herokuapp.com/'
+        deployedUrl: 'https://star-kids-app.herokuapp.com/'
     }
     ,
     {
