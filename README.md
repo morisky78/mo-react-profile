@@ -22,7 +22,7 @@ https://github.com/morisky78/mo-react-profile
 
 
 ### Screenshot on mobile
-- All mouseover effects are removed and show all hidden links on the project page.  
+- All mouseover effects are removed on mobile screen and directly show hidden links on the project page.  
 <img src="public/images/ms01.jpg" height="290" alt="Screenshot of about me"> <img src="public/images/ms02.jpg" height="290" alt="Screenshot of projects"> <img src="public/images/ms03.jpg" height="290" alt="Screenshot of contact"> <img src="public/images/ms04.jpg" height="290" alt="Screenshot of resume"> 
 
 ## Credits
@@ -31,7 +31,10 @@ https://reactjs.org/docs/getting-started.html
 - React Deployment
 https://create-react-app.dev/docs/deployment/
 - netlify
-https://www.netlify.com/
+https://www.netlify.com/ 
+- Contact form: sending email 
+https://www.emailjs.com/docs/examples/reactjs/ 
+
 
 ## Questions
 If you have any questions, please contact me moran.risk78@gmail.com  
