@@ -6,7 +6,7 @@ const projects = [
     {
         id:1,
         title: 'K-POP Trivia Fever',
-        githublink : 'https://github.com/shreyamishra9618/kpop-back-end.git',
+        githublink : 'https://github.com/shreyamishra9618/kpop-front-end',
         imgUrl: './images/project-kpop.jpg',
         deployedUrl: 'https://kpop-trivia-fever.netlify.app/'
     }
