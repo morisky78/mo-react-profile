@@ -1,7 +1,7 @@
 # Mo Risk's React Portfolio
 
 ## Description
-This is my portfolio webpage, a single-page application built with React. This will provide my brief bio, some of most recent projects with deployed page and github links, contact form, and downloadable resume. This application doesn't include a back-end side, so the form will not send any information for now.
+This is my portfolio webpage, a single-page application built with React. This will provide my brief bio, some of most recent projects with deployed page and github links, contact form, and downloadable resume.
 
 ## Usage
 - The URL of the Deployed page:  
@@ -13,7 +13,7 @@ https://github.com/morisky78/mo-react-profile
 
 ### Screenshot on desktop screen
 - On the portfolio page, each project image has links to the deployed page and the github repository. 
-- Contact me form will not send or save the information since this app doesn't have a back-end side.
+- Connpm run buildtact me form will not send or save the information since this app doesn't have a back-end side.
 - Contact me form will detect blank inputs and invalid email address and show error message accordingly.
 - The downloadable resume is a temporary sample.   
 
