@@ -1,7 +1,51 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import ProjectVideo from "./ProjectVideo";
 
-
+const video_list = [
+    {
+        id:1,
+        title: 'Virtual Choir',
+        sub_title: "USBKS 2020-21 'Flower Village'",
+        youtubeid: 'p5lmCPH7Uc4',
+        vfile: '',
+    },
+    {
+        id:2,
+        title: 'Hunminjeongeum',
+        sub_title: "USBKS 2019 Choir",
+        youtubeid: '7ukMZl1IQIw',
+        vfile: '',
+    },
+    {
+        id:3,
+        title: 'Korean Independence Movement Day',
+        sub_title: "100th Anniversary Celebration at USBKS",
+        youtubeid: 'M_pF5mPFhEw',
+        vfile: '',
+    },
+    {
+        id:4,
+        title: 'End of School Year Celebration',
+        sub_title: "USBKS 2017-18",
+        youtubeid: 'HhI3usIypoc',
+        vfile: '',
+    },
+    {
+        id:5,
+        title: 'USBKS Bellevue Choir 2021-22',
+        sub_title: "Market Day Performance",
+        youtubeid: 'LNL53tK4zeM',
+        vfile: '',
+    },
+    {
+        id:6,
+        title: 'USBKS Staff Virual Choir',
+        sub_title: "2021-21 End of School Year Celebration",
+        youtubeid: 'tiPuFMzGwQg',
+        vfile: '',
+    },
+]
 function PortfolioVideo() {
 
     const [activeV, setActiveV] = useState('vcard1');
@@ -20,7 +64,6 @@ function vPlayHandler(e) {
     const pVid = pBtn.parentNode.parentNode.id;
     console.log('Video Clicked Parent ID :' + pVid );
     setPlayingV(pVid);
-    
 }
 useEffect(() => {
     if ( activeV !== playingV) {
@@ -31,76 +74,16 @@ useEffect(() => {
 return (
 <div className="card_container">
 
-            <div className={activeV==='vcard1' ? 'card active':'card'} id="vcard1" onClick={vClickHandler}>
-                <div id="video_p5lmCPH7Uc4" className="vplayer">
-{ playingV=='vcard1' ? (
-    <iframe src="https://www.youtube.com/embed/p5lmCPH7Uc4?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-):''}
-
-                </div>
-                <div className={playingV==='vcard1' ? 'label hidden':'label'}>
-                    <span className="icon" data-vid="p5lmCPH7Uc4" onClick={vPlayHandler}></span>
-                    <div className="info">
-                        <div className="main">Virtual Choir</div>
-                        <div className="sub">USBKS 2020-21 'Flower Village'</div>                        
-                    </div>
-                </div>
-            </div>
-            <div className={activeV==='vcard2' ? 'card active':'card'} id="vcard2" onClick={vClickHandler}>
-                <div id="video_2" className="vplayer"></div>
-                <div className={playingV==='vcard2' ? 'label hidden':'label'}>
-                    <span className="icon" data-vid='2' data-vfile="mv_hunmin.mp4" onClick={vPlayHandler}></span>
-                    <div className="info">
-                        <div className="main">Hunminjeongeum</div>
-                        <div className="sub">USBKS 2019 Choir</div>
-                    </div>
-                </div>
-            </div>
-
-            <div className={activeV==='vcard3' ? 'card active':'card'} id="vcard3" onClick={vClickHandler}>
-                <div id="video_3" className="vplayer"></div>
-                <div className={playingV==='vcard3' ? 'label hidden':'label'}>
-                    <span className="icon" data-vid='3' data-vfile="mv_indi100_2019.mp4" onClick={vPlayHandler}></span>
-                    <div className="info">
-                        <div className="main">Korean Independence Movement Day</div>
-                        <div className="sub">100th Anniversary Celebration at USBKS</div>
-                    </div>
-                </div>
-            </div>
-
-            <div className={activeV==='vcard4' ? 'card active':'card'} id="vcard4" onClick={vClickHandler}>
-                <div id="video_HhI3usIypoc" className="vplayer"></div>
-                <div className={playingV==='vcard4' ? 'label hidden':'label'}>
-                    <span className="icon" data-vid="HhI3usIypoc"></span>
-                    <div className="info">
-                        <div className="main">End of School Year Celebration</div>
-                        <div className="sub">USBKS 2017-18 </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className={activeV==='vcard5' ? 'card active':'card'} id="vcard5" onClick={vClickHandler}>
-                <div id="video_LNL53tK4zeM" className="vplayer"></div>
-                <div className={playingV==='vcard5' ? 'label hidden':'label'}>
-                    <span className="icon" data-vid="LNL53tK4zeM"></span>
-                    <div className="info">
-                        <div className="main">USBKS Bellevue Choir 2021-22</div>
-                        <div className="sub">Market Day Performance</div>
-                    </div>
-                </div>
-            </div>
-
-            <div className={activeV==='vcard6' ? 'card active':'card'} id="vcard6" onClick={vClickHandler}>
-                <div id="video_tiPuFMzGwQg" className="vplayer"></div>
-                <div  className={playingV==='vcard6' ? 'label hidden':'label'}>
-                    <span className="icon" data-vid="tiPuFMzGwQg"></span>
-                    <div className="info">
-                        <div className="main">USBKS Staff Virual Choir</div>
-                        <div className="sub">2021-21 End of School Year Celebration</div>
-                    </div>
-                </div>
-            </div>
-           
+{video_list.map(item=>(
+<ProjectVideo 
+    key={item.id} 
+    item={item} 
+    activeV={activeV} 
+    playingV={playingV} 
+    vPlayHandler={vPlayHandler} 
+    vClickHandler={vClickHandler}/>))
+} 
+         
 
         </div>
   )
