@@ -42,6 +42,17 @@ export default function Resume({currentPage, setCurrentPage}) {
         </ul>
       </div>
 
+      <div className='contentbox'>
+        <h3>Graphic Proficiencies</h3>
+        <ul>
+          <li>Photoshop</li>
+          <li>Illustrator</li>
+          <li>InDesign</li>
+          <li>Premiere</li>
+          <li>Graphic Design</li>
+          <li>UI Design</li>
+        </ul>
+      </div>
 
     </div>
   )

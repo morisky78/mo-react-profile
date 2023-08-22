@@ -1,7 +1,7 @@
 .about {display:flex;text-align: left;align-items: flex-start;}
 .about .profilepic{width:35%;filter: brightness(0.8);}
 .about .contentbox{position:relative;width:68%;top:30px;left:-30px;}
-
+.about p{margin-bottom:10px;}
 
 /* Tablets - header changes color */
 @media screen and (max-width: 992px) {

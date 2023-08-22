@@ -17,7 +17,7 @@ function App() {
           <Routes>
               <Route path="/" element={<About  currentPage={currentPage} setCurrentPage={setCurrentPage} />} /> 
               <Route path="/portfolio" element={<Portfolio currentPage={currentPage} setCurrentPage={setCurrentPage} />}/>
-              <Route path="/contact" element={<Contact  currentPage={currentPage} setCurrentPage={setCurrentPage} />} />
+              {/* <Route path="/contact" element={<Contact  currentPage={currentPage} setCurrentPage={setCurrentPage} />} /> */}
               <Route path="/resume" element={<Resume  currentPage={currentPage} setCurrentPage={setCurrentPage} />} />
               <Route path="*" element={<h2>404 page</h2>} />
           </Routes>

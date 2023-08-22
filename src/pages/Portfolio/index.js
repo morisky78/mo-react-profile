@@ -1,6 +1,8 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 import Project from "../../components/Project";
 import PortfolioVideo from '../../components/PortfolioVideo';
+import { Graphics, Publishing} from '../../media';
+import Iframe from 'react-iframe'
 import "./style.css"
 
 const projects = [
@@ -25,7 +27,7 @@ const projects = [
         title: 'USBKS Fundrasing',
         githublink : '',
         imgUrl: './images/usbks_auction.jpg',
-        deployedUrl: 'https://usbks.us/auction/'
+        deployedUrl: 'https://usbks.us/auction/index.php?tab=auc_rsvp'
     },
     {
         id:5,
@@ -50,6 +52,7 @@ const projects = [
     },
 
 ]
+
 export default function Portfolio({currentPage, setCurrentPage}) {
  
   useEffect(() => {
@@ -63,53 +66,99 @@ export default function Portfolio({currentPage, setCurrentPage}) {
     console.log(this.id)
   }
 
+const[activeCat, setActiveCat] = useState('web');
+const [graphicFile, setGraphicFile] =  useState(null);
+const [pubFile, setPubFile] =  useState(null);
+
+const changeCat = (event, newcat) => {
+    const {target} = event;
+    setActiveCat(newcat);
+}
+
+
+
   return (
     <div className="portfolio">
         <h2>Portfolio</h2>
-        <div className="work_cat_navi">
-           <a href="#webdev">Web Development</a>
-           <a href="#publish">Publishing</a>
-           <a href="#video">Video Creation</a>
-           <a href="#graphic">Marketing Design</a>
-        </div>
-
-        <section id="webdev"> 
-        <h3>Web Development</h3>       
-        <ul>
-          {projects.map(item=>(<Project key={item.id} item={item}/>))} 
-        </ul>
-        </section>
-
-        <section id="graphic">
-        <h3>Marketing Design</h3>   
+        <nav className="work_cat_navi">
             <ul>
-                <li><a href="##"><img src="./images/usbks_brochure_seattle.jpg" /></a></li>
-                <li><a href="##"><img src="./images/poster_2018.jpg" /></a></li>
-                <li><a href="##"><img src="./images/usbks_ad.jpg" /></a></li>
+            {/* <li onClick={event=>changeCat(event, 'all')}  className={activeCat==='all'?'on':''}>
+                <i className="fa fa-list"></i>
+                <span>All</span></li> */}
+            <li onClick={event=>changeCat(event, 'web')}  className={activeCat==='web'?'on':''}>
+                <i className="fa fa-laptop"></i><span>Web Development</span></li>
+            <li onClick={event=>changeCat(event, 'graphic')}  className={activeCat==='graphic'?'on':''}>
+                <i className="fa fa-paint-brush"></i><span>Marketing Design</span></li>
+            <li onClick={event=>changeCat(event, 'video')}  className={activeCat==='video'?'on':''}>
+                <i className="fa fa-video-camera"></i><span>Video Creation</span></li>
+            <li onClick={event=>changeCat(event, 'publish')}  className={activeCat==='publish'?'on':''}>
+                <i className="fa fa-book"></i><span>Publishing</span></li>
+
+            </ul>
+        </nav>
+
+{(activeCat==='web' || activeCat==='all')  && (
+        <section id="webdev"> 
+            <h3>Web Development</h3>       
+            <ul>
+                {projects.map(item=>(<Project key={item.id} item={item}/>))} 
             </ul>
         </section>
+        ) }
 
+{(activeCat==='publish' || activeCat==='all') && (
         <section id="publish">
         <h3>Publishing</h3>   
-            <ul>
-                <li><a href="" target="_blank">
-                <img src="./images/yearbook_19-20.jpg"  alt="USBKS yearbook 2019-20" />
-                </a></li>
-                <li><a href="" target="_blank">
-                <img src="./images/yearbook_20-21.jpg"  alt="USBKS yearbook 2019-20" />
-                </a></li>
-                <li><a href="" target="_blank">
-                <img src="./images/yearbook_21-22.jpg"  alt="USBKS yearbook 2019-20" />
-                </a></li>
-            </ul>
+            <div className='graphic-container'>
+            {  
+                Publishing.map((file, index) => (
+                    <div className='media' key={index} >
+                        <img src={file.url} alt="" />
+                        <a href={file.link} target="_blank" className='exlink'><i className="fa fa-external-link fa-2x"></i></a>
+                    </div>
+                ))
+            }
+            </div>
+
         </section>
 
-        <section id="video">
+
+        ) }      
+
+{(activeCat==='video' || activeCat==='all')&& (
+    <section id="video">
         <h3>Video Creation</h3>   
         <PortfolioVideo />
+    </section> 
+) }  
 
-        
-        </section>
+{(activeCat==='graphic' || activeCat==='all') && (
+    <section id="graphic">
+    <h3>Marketing Design</h3>   
+    <div className='graphic-container'>
+        {  
+            Graphics.map((file, index) => (
+                <div className='media' key={index} onClick={()=>setGraphicFile(file)}>
+                    {
+                        file.type === 'image'
+                        ? <img src={file.url} alt="" />
+                        : <video src ={file.url} muted/>
+                    }
+                </div>
+            ))
+        }
+
+    </div>
+    <div className='popup-graphic' style={{display: graphicFile ? 'block': 'none'}}>
+        <span onClick={()=> setGraphicFile(null)}>&times;</span>
+        {
+            graphicFile?.type === 'video'
+            ? <video src={graphicFile?.url} muted autoPlay controls />
+            : <img src={graphicFile?.url} />
+        }
+    </div>
+    </section>
+) }  
 
 
     </div>

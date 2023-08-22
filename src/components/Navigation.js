@@ -13,9 +13,9 @@ export default function Navigation({currentPage, setCurrentPage}) {
         <li className={currentPage==='portfolio'?'on':''}>
           <Link to="/portfolio" data-text="&nbsp;Portfolio"  onClick={()=>setCurrentPage('portfolio')}>&nbsp;Portfolio</Link>
           <span className='arr'></span></li>
-        <li className={currentPage==='contact'?'on':''}>
+        {/* <li className={currentPage==='contact'?'on':''}>
           <Link to="/contact" data-text="&nbsp;Contact" onClick={()=>setCurrentPage('contact')}>&nbsp;Contact</Link>
-          <span className='arr'></span></li>
+          <span className='arr'></span></li> */}
         <li className={currentPage==='resume'?'on':''}>
           <Link to="/resume" data-text="&nbsp;Resume" onClick={()=>setCurrentPage('resume')}>&nbsp;Resume</Link>
           <span className='arr'></span></li>
