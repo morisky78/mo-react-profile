@@ -3,6 +3,9 @@
 .about .contentbox{position:relative;width:68%;top:30px;left:-30px;}
 .about p{margin-bottom:10px;}
 
+.about ul{padding:15px 0 0 0px;}
+.about li{font-size:0.90em; color:var(--clr);margin-bottom:10px;}
+.about a{color:#fff;}
 /* Tablets - header changes color */
 @media screen and (max-width: 992px) {
     .about .contentbox{top:0;left:0;width:65%;}

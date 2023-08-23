@@ -21,6 +21,13 @@ export default function About({currentPage, setCurrentPage}) {
 <p>I'm also a wife and mom of three wonderful children. I love staying active through various outdoor activities and exercises. </p>
 <p>Thank you for stopping by, and I look forward to connecting with you! </p>
 
+<ul>
+  <li>Email: <a href = "mailto: moran.risk78@gmail.com">moran.risk78@gmail.com</a></li>
+  <li>LinkedIn: <a href = "https://www.linkedin.com/in/mo-risk/" target='_blank'>linkedin.com/in/mo-risk/</a></li>
+  <li>GitHub: <a href = "https://github.com/morisky78" target='_blank'>github.com/morisky78</a></li>
+</ul>
+
+
 
         </div>
     </div>
