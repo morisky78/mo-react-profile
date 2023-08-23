@@ -15,7 +15,7 @@ export default function Resume({currentPage, setCurrentPage}) {
         
       <div className='contentbox hd'>
         <h2>Resume</h2>
-        <p>Download my <a href="MoRisk_Resume_02.pdf" download>resume</a></p>
+        <p>Download my <a href="MoRisk_Resume.pdf" download>resume</a></p>
       </div>
         
       
